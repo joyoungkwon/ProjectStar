@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="resources/css/layout.css">
+	<link rel="stylesheet" href="resources/css/my.css">
+	<link rel="stylesheet" href="resources/css/index.css">
+	<script type="text/javascript" src="resources/js/index.js"></script>
+	<!-- 5. 아이콘 끌어오기 (폰트어썸)-->
+   <script src="https://kit.fontawesome.com/64319e1cb9.js" crossorigin="anonymous"></script> 
+   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"> 
+  <title>메인 페이지 - 카테고리 선택</title>
+</head>
+
+<body>
+	<div class="slide" id="slide">
+		<div class="slide_menu" onclick="closeSlide()">
+			<button id="menu_btn">
+				<i class="fa-regular fa-circle-xmark fa-lg" style="color: #202a3c;"></i>
+			</button> 
+		</div>
+    <div class="slide_top"></div>
+    <div class="slide_middle"><b>바로가기</b></div>
+    <div class="slide_bottom"><b>신뢰온도 랭킹</b></div>
+  </div> <!-- slide 닫기 - 메뉴 버튼 누르면 나올 메뉴 div -->
+ <div id="slide_background"></div> <!-- 슬라이드 나올 때 뒷배경 블러 처리-->
+
+	<div id="menu_bar">
+		<button id="menu_btn" onclick="openSlide()">
+			<i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+		</button>
+		<div id="logo_text" class="text-center">로고</div>
+		<a id="login_btn" href='login.jsp'><i class="fa-solid fa-house fa-lg" style="color: #ffffff;"></i></a>
+	</div>
+	<div id="sec"></div>
+	<div id="profile" class="flex flex-jus-center" onclick="location.href='#'">
+		<div class="wid-90 flex flex-between">
+			<div class="wid-35 hei-100 flex flex-center">
+				<img id="img" class="wid-90 hei-70" src="resources/img/카페1.jpg"></img>
+			</div>
+			<div class="wid-55 hei-100 ">
+				<div class="wid-100 hei-50 flex flex-column flex-jus-end">
+					<b class="wid-90" style="font-size: 2.0vh;">닉네임</b>
+					<div class="wid-90" style="font-size: 1.5vh;">팔로워 2 | 팔로잉 10</div>
+				</div>
+				<div class="wid-100 hei-30 flex">
+					<div class="wid-10 hei-100 flex flex-ali-center">
+						<img src="resources/img/마트1.jpg" alt="tier" class="wid-100 hei-40">
+					</div>
+					<div class="wid-90 hei-100 flex flex-center">
+						<div class="wid-90 hei-30" style="background-color: yellow;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sec"></div>
+	<div id="latest" class="flex">
+		<div class="wid-30 hei-100 flex flex-center">
+			<div class="wid-90 hei-90"></div>
+		</div>
+		<div class="wid-30 hei-100"></div>
+		<div class="wid-30 hei-100"></div>
+		<div class="wid-30 hei-100"></div>
+	</div>
+	<div id="sec"></div>
+	<div id="link" class="flex flex-column flex-center">
+		<div onclick="location.href='#'">
+			<p>내 리뷰 관리</p>
+			<p>&gt;</p>
+		</div>
+		<div onclick="location.href='#'">
+			<p>내 댓글 관리</p>
+			<p>&gt;</p>
+		</div>
+		<div onclick="location.href='#'">
+			<p>찜 목록</p>
+			<p>&gt;</p>
+		</div>
+		<div onclick="location.href='#'">
+			<p>문의</p>
+			<p>&gt;</p>
+		</div>
+	</div>
+</body>
+
+</html>

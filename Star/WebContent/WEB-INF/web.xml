@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<display-name>Star</display-name>
+	<welcome-file-list>
+	  <welcome-file>index.html</welcome-file>
+	  <welcome-file>index.htm</welcome-file>
+	  <welcome-file>index.jsp</welcome-file>
+	  <welcome-file>default.html</welcome-file>
+	  <welcome-file>default.htm</welcome-file>
+	  <welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>MemberServlet</servlet-name>
+		<servlet-class>controller.MemberServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberServlet</servlet-name>
+		<url-pattern>*.member</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BoardServlet</servlet-name>
+		<servlet-class>controller.BoardServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BoardServlet</servlet-name>
+		<url-pattern>*.board</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>Board_view_filter</filter-name>
+		<filter-class>filter.board_view_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Board_view_filter</filter-name>
+		<url-pattern>/board_view.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Board_view_detail_filter</filter-name>
+		<filter-class>filter.board_view_detail_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Board_view_detail_filter</filter-name>
+		<url-pattern>/board_view_detail.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Board_view_edit_filter</filter-name>
+		<filter-class>filter.board_view_edit_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Board_view_edit_filter</filter-name>
+		<url-pattern>/board_view_edit.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Login_filter</filter-name>
+		<filter-class>filter.Login_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Login_filter</filter-name>
+		<url-pattern>/login.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Main_filter</filter-name>
+		<filter-class>filter.Main_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Main_filter</filter-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>My_filter</filter-name>
+		<filter-class>filter.My_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>My_filter</filter-name>
+		<url-pattern>/my.jsp</url-pattern>
+		<url-pattern>/my_edit.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>My_wish_filter</filter-name>
+		<filter-class>filter.My_wish_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>My_wish_filter</filter-name>
+		<url-pattern>/my_wish_board.jsp</url-pattern>
+	</filter-mapping>
+	
+	<!-- my_view_filter -->
+	<filter>
+		<filter-name>My_view_filter</filter-name>
+		<filter-class>filter.My_view_filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>My_view_filter</filter-name>
+		<url-pattern>/my_view.jsp</url-pattern>
+	</filter-mapping>
+	
+</web-app>

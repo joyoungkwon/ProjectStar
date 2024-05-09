@@ -1,0 +1,172 @@
+#option_div {
+  margin-right: 1%;
+  display: flex;
+}
+#board_container {
+ /*  border: 1px solid gray;  확인용 */
+  border-radius: 11px;
+  width: 90vw;
+  height: 83vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.custom_row_basic {
+ /*  border: 1px solid gray;  확인용*/
+  /*  --bs-gutter-x: 0rem; */
+  /* --bs-gutter-y: 0rem; */
+  border-radius: 11px;
+  width: inherit;
+  height: inherit;
+  /* padding: 1%; */
+  overflow-y: scroll;
+  display: flex;
+  align-content: flex-start;
+  /*스크롤 숨기기*/
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+.custom_row_basic::-webkit-scrollbar {
+  display: none; 
+/* 크롬,사파리,오페라,엣지 - 스크롤 숨기기*/
+}
+.col-6 {
+  padding: 0;
+}
+.content_col_small {
+   /*border: 1px solid gray; 확인용 */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 3%;
+  border-radius: 10%;
+  /* height: 22.5vh; */ /* 나중에 정사각형 사진 넣으면 뺄 거 */
+}
+.col-12 {
+  padding: 0;
+}
+.content_col_big {
+  /* border: 1px solid gray;  확인용 */
+  border-top: 1px solid gray; /* 확인용 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8rem;
+  /* height: 80vh; */ /* 나중에 정사각형 사진 넣으면 뺄 거 */
+}
+#view_box > div:nth-child(2n) {
+	display: none;
+}
+
+/* small -기본 보기일 때 게시물 위로 커서 올리면 나타날 div 부분*/
+.event_small {
+  position: relative;
+  overflow: hidden;
+}
+.img_s_box {
+  width: inherit;
+  height: inherit;
+  text-align: center;
+}
+.img_s_size {
+  max-width: 100%;
+  min-height: 100%;
+}
+.div_hover {
+  position: absolute;
+  margin-top: 20%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 5%,rgba(250, 248, 248, 0.628) 120%); 
+  transform: translateY(70%); 
+  transition: 0.5s;
+}
+.div_hover .title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2vh;
+  color: white;
+  text-shadow: 2px 2px 2px gray; 
+}
+.div_hover .content {
+  font-size: 1.5vh;
+  color: white;
+}
+.event_small:hover .div_hover {
+  transform: translateY(0);
+}
+
+/* big - 크게 보기일 때 */
+.big { /* content_col_big 안에 있는 div들 (= 상세보기 안 div들)*/
+  width: inherit;
+  /*  border-bottom: 1px solid gray; 확인용*/
+  background-color: white;
+}
+.content_head {
+  height: 6vh;
+  background-color:rgba(23, 24, 24, 0.336);
+  /* background-color: rgba(218, 221, 221, 0.336); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+}
+.content_img {
+  /* height: 41vh; */
+}
+.img_b_size {
+  max-width: 100%;
+  min-height: 100%; 
+}
+.content_midbar {
+  height: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(23, 24, 24, 0.336); 
+  color:white;
+}
+.content_write {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3%;
+  /* background-color:rgba(23, 24, 24, 0.336);  */
+  color:black;
+  font-size: 1rem;
+}
+.content_head .profile {
+  /* border: 1px solid gray; 확인용 */
+  /* overflow: hidden; */
+}
+.profile .profile_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* big 상세보기*/
+#back_btn {
+  width: 10%;
+}
+#logo_div {
+  width: 10%;
+  height: 10%;
+}
+.fa-chevron-left {
+  margin-left: 10%;
+ }
+
+ /* small 보기 - 정렬  div */
+ .sort {
+  display:flex;
+  margin-bottom: 3%;
+  margin-left: 3%;
+}
+.fa-expand+.fa-expand{
+  margin-left: 2%;
+}

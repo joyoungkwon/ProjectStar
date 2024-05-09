@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body { 
+  margin: 0 auto;
+  background-color: rgba(174, 174, 180, 0.199); 
+}
+#menu_bar {
+  display: flex;
+  font-weight: bold;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:rgba(174, 174, 180, 0.158);
+  font-size: 2vh;
+  height: 7vh;
+}
+#menu_btn {
+  padding-left: 7px;
+  border: none;
+  background-color:transparent;
+} 
+#login_btn {
+  padding-right: 7px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0b0f36;
+}

@@ -1,0 +1,24 @@
+cate
+-> cate값을
+
+if (cate==null){
+전체 검색
+} 
+
+맛집-food
+카폐 cafe
+병원 -hos
+무인매장-shop
+헬스장-gym
+여행지-tra
+영화관-movie
+미용실-hair
+은행-bank
+가구점-furn
+수리점-eng
+동물병원-animal
+마트-mart
+옷가게-clo
+문구점-pen
+
+

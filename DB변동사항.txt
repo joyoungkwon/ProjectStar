@@ -1,0 +1,7 @@
+DB 변동사항
+member 테이블에 img 컬럼 추가
+테이블 추가
+board_Good / board_Bad
+boardReply_Good / Bad
+boardReReply_Good / Bad
+board_cate

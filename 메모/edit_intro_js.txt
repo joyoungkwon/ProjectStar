@@ -1,0 +1,60 @@
+
+// 영권
+document.addEventListener("DOMContentLoaded", function() {
+    // 폼 안에 있는 요소 세팅
+    const introForm = document.forms['intro_frm']; // frm 이름
+    const introInput = introForm.elements['intro']; // input 의 이름 
+    const editButton = document.getElementById('link'); // 버튼의 아이디
+    const login_user = introForm.elements['login_user'];
+
+    // 폼 servlet으로 보내기
+    function update_frm_submit(event) { 
+        event.preventDefault(); // 기본 방식 제한걸기
+
+        // input에 새로운값 추가한거 가꼬오기
+        const updatedIntro = introInput.value; 
+        const req_loginUser = login_user.value;
+
+       // 위에 세팅한 introfrom의 action을 edit_intro.member으로 보내고 파라미터 intro로 읽어들인
+       // input 값 (새롭게) 붙혀서 보내기
+       //encodeURIComponent 함수는 URI 구성 요소를 인코딩하는 JavaScript 함수입니다. 이 함수는 
+       //특수 문자나 예약어를 포함한 문자열을 안전하게 URL에 포함될 수 있는 형태로 변환
+        introForm.action = 'edit_intro.member?intro=' + encodeURIComponent(updatedIntro) + '&login_user?'+encodeURIComponent(req_loginUser);
+
+        // 이제 폼 제출
+        introForm.submit();
+    }
+
+    // "인사말 수정" 버튼 클릭 이벤트
+    editButton.addEventListener('click', function() {
+        // 입력 창 활성화 및 포커스 설정
+        // focus 넣는게 이쁠거 같아서 넣음.
+        introInput.removeAttribute('disabled');
+        introInput.focus();
+
+        // 버튼 텍스트를 "수정 끝내버리기"로 변경
+        editButton.innerText = '수정 끝내버리기';
+
+        // 버튼 클릭 이벤트를 폼 제출로 변경
+        editButton.removeEventListener('click', btn_link_change);
+        // 
+        editButton.addEventListener('click', update_frm_submit);
+    });
+
+    // 초기 버튼 클릭 이벤트 핸들러
+    function btn_link_change() {
+        // 입력 창 활성화 및 포커스 설정
+        introInput.removeAttribute('disabled');
+        introInput.focus();
+
+        // 버튼 텍스트를 "제출"로 변경
+        editButton.innerText = '제출';
+
+        // 버튼 클릭 이벤트를 폼 제출로 변경
+        editButton.removeEventListener('click', btn_link_change);
+        editButton.addEventListener('click', update_frm_submit);
+    }
+
+    // 초기 버튼 클릭 이벤트 핸들러 추가
+    editButton.addEventListener('click', btn_link_change);
+});

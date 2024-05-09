@@ -1,0 +1,36 @@
+.sbtn {
+  margin: 2px;
+}
+#write_box {
+  border: 1px solid gray;
+  overflow: hidden;
+  background-color: white;
+  opacity: 0.9;
+  color: black;
+}
+.write_head {
+  height: 5vh;
+  color:white;
+  background-color: white;
+  opacity: 0.7;
+}
+.write_content_img {
+  height: 41vh;
+}
+.write_content_midbar {
+  height: 6vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color:white;
+}
+.write_content_w {
+  height: 38vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3%;
+}
+.btn-primary {
+  color: white;
+}

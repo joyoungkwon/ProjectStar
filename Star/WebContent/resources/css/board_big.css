@@ -1,0 +1,128 @@
+@charset "UTF-8";
+.col-12 {
+  padding: 0;
+}
+.content_col_big {
+  /* border: 1px solid gray;  확인용 */
+  font-size: 0.8rem;
+}
+.big_con {
+  border-radius: 11px;
+}
+/* big - 크게 보기일 때 */
+.big { /* content_col_big 안에 있는 div들 (= 상세보기 안 div들)*/
+  width: 100%;
+  /* background-color: white; */
+}
+.content_head {
+  height: 5.5vh;
+  /* background-color:white; */
+  /* background-color: rgba(218, 221, 221, 0.336); */
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 2%;
+}
+.content_img {
+  height: 40vh;
+  border: 1px solid gray;
+  border-radius: 11px;
+  overflow: hidden;
+}
+.img_b_size {
+  min-width: 100%;
+  max-height: 100%; 
+}
+.content_midbar {
+  height: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  /* background-color: white; */
+  font-size: 1rem;
+  border-bottom: 1px solid gray;
+}
+.content_write {
+  min-height: 16vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  font-size: 1rem;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  /* overflow: hidden; */
+  text-align: left;
+}
+.content_comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+}
+.content_head .profile {
+  /* border: 1px solid gray; 확인용 */
+  overflow: hidden;
+}
+.profile{
+  width: 12%;	/* 프사 들어오면(정사각) width값 삭제 */
+  height: 100%;
+  border-radius: 50%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: 1px solid gray;
+}
+.profile img {
+  width: 100%;
+  max-height: 100%;
+}
+#user_id{
+	width: 70%;
+    text-align: left;
+}
+.big_con {
+  border-radius: 11px;
+}
+.back_btn {
+  padding-left: 3%;
+}
+.comment {
+  width: 100%;
+  max-height: 97%;
+}
+.real_text {
+  /* width: 100%; */
+  /* max-height: 70%;  */
+  overflow: hidden;
+  text-overflow: ellipsis; /*텍스트가 요소의 경계를 벗어날 때 "..."으로 생략 처리*/
+  -webkit-line-clamp: 4; /*글의 최대 라인 수*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+.more-text { /* 더보기 */
+  color: gray;
+  cursor: pointer;
+}
+.less-text { /* 줄이기 */
+  color: gray;
+  cursor: pointer;
+  display: none;    
+}
+
+/* 댓글 창 */
+.cmt_1 > input { 
+  flex: 1;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+}
+.wtn { /* 등록 버튼*/
+  font-size: 1.5vh;
+  border-radius: 0 5px 5px 0;
+  height: 100%;
+  width: 100%;
+}

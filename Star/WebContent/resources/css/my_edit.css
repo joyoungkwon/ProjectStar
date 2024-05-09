@@ -1,0 +1,40 @@
+@charset "UTF-8";
+#top #img{
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px 0.5px lightslategrey;
+	max-height: 88%;
+    max-width: 20%;
+}
+#top{
+	background-color: white;
+	border-radius: 10px;
+}
+#addr{
+	background-color: white;
+	border-radius: 10px;
+}
+#hi{
+	background-color: white;
+	border-radius: 10px;
+}
+#link{
+	color: blue;
+	font-size: 1vh;
+}
+#div_top{
+	font-size: 1.5vh;
+	height: 3vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-shrink: 0;
+}
+.border{
+	border-bottom: 1px solid lightgray;
+}
+button {
+	border: none;
+}
+input[name=intro]{
+	border: none;
+}

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.content_col_big > div{
+	overflow: hidden;
+	position: relative;
+}
+/* .content_col_big:hover .content_comment{
+	top: 20%;
+}
+.content_comment{
+	background-color: rgba(0,0,0, 0.6);
+    position: absolute;
+    height: 80%;
+    transition: 1s;
+    overflow: hidden;
+} */
+
+.content_comment{
+	display: none;
+}

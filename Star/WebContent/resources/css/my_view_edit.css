@@ -1,0 +1,11 @@
+@charset "UTF-8";
+body { 
+  margin: 0 auto;
+  background-color: rgba(174, 174, 180, 0.199); 
+}
+button{
+	border: none;
+}
+input{
+	border: none;
+}

@@ -1,0 +1,273 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> -->
+<!-- 위 코드는 vs에서 안먹혀서 작업할 때만 주석 처리 해놨어요-->
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 1. 반응형 meta 태그 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<!-- 2. 부트스트랩 CDN 링크 -->
+  <link rel="stylesheet" href="/Star/WebContent/resources/css/layout.css">
+	<link rel="stylesheet" href="/Star/WebContent/resources/css/index.css">
+	<link rel="stylesheet" href="/Star/WebContent/resources/css/menu_bar.css">
+	<link rel="stylesheet" href="/Star/WebContent/resources/css/board_view.css">
+	<link rel="stylesheet" href="/Star/WebContent/resources/css/board_small.css">
+	<!-- 3. 내 스타일은 부트스트랩 스타일 뒤에 -->
+  <script type="text/javascript" src="/Star/WebContent/resources/js/menu_bar.js" ></script>
+  <script type="text/javascript" src="/Star/WebContent/resources/js/board_view.js" ></script>
+	<!-- 4. 자바스크립트 -->
+	<script src="https://kit.fontawesome.com/64319e1cb9.js" crossorigin="anonymous"></script> 
+	<!-- 5. 아이콘 끌어오기 (폰트어썸)-->
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"> 
+	<!-- 6. 구글 폰트 -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+	<title>리뷰 게시판(기본-small)</title>
+</head>
+
+<body>
+  <div id="head_menu" class="jumbotron text-center">
+    <div class="slide1" id="slide1">
+			<div class="slide1_menu" onclick="closeSlide()">
+				<div class="wid-10"></div>
+				<button class="btn btn-info">글작성</button>
+				<button id="menu_btn" class="wid-10">
+					<i class="fa-solid fa-xmark fa-lg"></i>
+				</button>
+			</div>
+			<div class="hei-15 flex flex-center" style="border: 1px solid red;">
+				<div class="hei-90" style="border: 1px solid blue;"></div>
+			</div>
+			<div class="slide1_top"></div>
+			<div class="slide1_bottom"><b>신뢰온도 랭킹</b></div>
+		</div> <!-- slide1 닫기 - 메뉴 버튼 누르면 나올 메뉴 div -->
+	 <div id="slide1_background"></div> <!-- 슬라이드 나올 때 뒷배경 블러 처리-->
+
+    <div id="menu_bar">
+      <div class="pull-left">
+      <button id="menu_btn" onclick="openSlide()">
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </button> <!-- 메뉴 버튼-->
+      </div>
+      <div class="wid-6"></div>
+        <div id="all_mini" class="container center">
+          <div><i class="fa-solid fa-hashtag fa-lg"></i></div>
+          <div><i class="fa-solid fa-utensils fa-lg"></i></div>
+          <div><i class="fa-solid fa-mug-saucer fa-lg"></i></div>
+          <div><i class="fa-regular fa-hospital fa-lg"></i></div>
+          <div><i class="fa-solid fa-shop fa-lg"></i></div>
+          <div><i class="fa-solid fa-dumbbell fa-lg"></i></div>
+          <div><i class="fa-solid fa-plane-departure fa-lg"></i></div>
+          <div><i class="fa-solid fa-film fa-lg"></i></div>
+          <div><i class="fa-solid fa-scissors fa-lg"></i></div>
+          <div><i class="fa-solid fa-building-columns fa-lg"></i></div>
+          <div><i class="fa-solid fa-couch fa-lg"></i></div>
+          <div><i class="fa-solid fa-wrench fa-lg"></i></div>
+          <div><i class="fa-solid fa-dog fa-lg"></i></div>
+          <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
+          <div><i class="fa-solid fa-shirt fa-lg"></i></div>
+          <div>
+            <i class="fa-brands fa-waze fa-lg"></i>
+            <i class="fa-solid fa-pen fa-sm"></i>
+          </div>
+     </div>
+     <div class="wid-6"></div>
+     <div class="pull-right"></div>
+    </div> <!-- menu_bar 닫기-->
+  </div> <!--head_menu 닫기-->
+
+  <div class="sort_div" class="container text-center">
+    <div class="sort">
+      <i class="fa-solid fa-expand fa-sm" style="color: #ffffff;"></i> <!--기본보기-->
+      <i class="fa-solid fa-expand fa-lg" style="color: #ffffff;"></i> <!--크게보기-->
+    </div>
+      <select class="small-select form-select form-select-sm" aria-label="Small select example">
+        <option selected>정렬</option>
+        <option value="1">최신순</option>
+        <option value="2">인기순</option>
+        <option value="3">신뢰온도순</option>
+      </select>
+  </div>
+
+  <div id="board_container" class="container text-center">
+      <div class="row custom_row_basic">
+        <!-- 기본보기 (small) -->
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/여행지1.jpg" >
+            </div>
+            <div class="div_hover">
+              <div class="title">서울 야경</div>
+              <div class="null"></div>
+              <div class="content">내용내용내용내용내용내용내용내용내용내용내용내용</div>
+              <div class="null"></div>
+              <div class="hit_good">
+                <i class="fa-solid fa-eye fa-sm" style="color: #651ded;"></i> 
+                <div id="count" class="h_bottom">123</div> <!--조회수-->
+                <i class="fa-solid fa-thumbs-up fa-sm" style="color: #651ded;"></i> 
+                <div id="up" class="h_bottom">123</div> <!-- 좋아요-->
+                <i class="fa-solid fa-thumbs-down fa-sm" style="color:  #651ded;"></i>
+                <div id="down" class="h_bottom">123</div> <!-- 싫어요--> 
+              </div>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  
+        
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/영화관1.jpg" >
+            </div>
+            <div class="div_hover">
+              <div class="title">영화관</div>
+              <div class="null"></div>
+              <div class="content">내용내용내용내용내용내용내용내용내용내용내용내용</div>
+              <div class="null"></div>
+              <div class="hit_good">
+                <i class="fa-solid fa-eye fa-sm" style="color: #651ded;"></i> 
+                <div id="count" class="h_bottom">123</div> <!--조회수-->
+                <i class="fa-solid fa-thumbs-up fa-sm" style="color: #651ded;"></i> 
+                <div id="up" class="h_bottom">123</div> <!-- 좋아요-->
+                <i class="fa-solid fa-thumbs-down fa-sm" style="color:  #651ded;"></i>
+                <div id="down" class="h_bottom">123</div> <!-- 싫어요--> 
+              </div>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+        
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/맛집2.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">햄버거 신메뉴</p>
+              <p class="content">내용</p>
+              <p class="hit_good">
+                <i class="fa-solid fa-eye fa-sm" style="color: #1d69ed;"></i> 123 <!--조회수--> &nbsp;
+                <i class="fa-solid fa-thumbs-up fa-sm" style="color: #1d69ed;"></i> 12 <!-- 좋아요--> &nbsp;
+                <i class="fa-solid fa-thumbs-down fa-sm" style="color: #1d69ed;"></i> 2 <!-- 싫어요--> &nbsp;
+              </p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/옷가게2.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">성수동 옷가게 추천</p>
+              <p class="content">안녕하세요</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/카페2.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">분위기 좋은 카페</p>
+              <p class="content">안녕하세요</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/여행지2.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">광주 아시아문화전당</p>
+              <p class="content">안녕하세요</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/병원1.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">우리 동네 병원</p>
+              <p class="content">안녕하세요</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/백화점.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">더 현대 서울</p>
+              <p class="content">내용</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/영화관2.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">영화관</p>
+              <p class="content">영화관2</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+        
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/마트1.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">24시 마트</p>
+              <p class="content">안녕하세요</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/미용실1.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">미용실</p>
+              <p class="content">안녕하세요</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+        <div class="col-6">
+          <div class="content_col_small event_small">
+            <div class="img_s_box">
+              <img class="img_s_size" src="resources/img/맛집1.jpg" >
+            </div>
+            <div class="div_hover">
+              <p class="title">전대후문 피맥</p>
+              <p class="content">안녕하세요</p>
+            </div>
+          </div> <!-- content_col_small 닫기 -->
+        </div>  <!-- col-6 닫기 -->
+
+    </div> <!-- row 닫기 -->
+  </div> <!-- board_container 닫기 -->
+  <script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+  <!-- 부트스트랩 - 자바스크립트 : body 태그 닫는 곳 바로 앞에 위치 -->
+</body>
+</html>

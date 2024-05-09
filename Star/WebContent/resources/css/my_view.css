@@ -1,0 +1,40 @@
+@charset "UTF-8";
+#option_div {
+  margin-right: 1%;
+  display: flex;
+}
+.form-select {
+  margin: 1%;
+ }
+#board_container {
+  /*  border: 1px solid gray; 확인용 */
+  border-radius: 11px;
+  width: 90vw;
+  height: 83vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.custom_row_basic {
+ /*  border: 1px solid gray;  확인용*/
+  /*  --bs-gutter-x: 0rem; */
+  /* --bs-gutter-y: 0rem; */
+  /* border-radius: 11px; */
+  width: inherit;
+  height: inherit;
+  /* padding: 1%; */
+  overflow-y: scroll;
+  display: flex;
+  align-content: flex-start;
+  /*스크롤 숨기기*/
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+.custom_row_basic::-webkit-scrollbar {
+  display: none; 
+/* 크롬,사파리,오페라,엣지 - 스크롤 숨기기*/
+}
+.my-select {
+  width: 5.4rem;
+}

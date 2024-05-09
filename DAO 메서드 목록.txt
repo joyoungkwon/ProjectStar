@@ -1,0 +1,32 @@
+MemberDAO
+  insertMember(Member member)  // 회원가입
+  updateMember(String column, String value, String id)  // 회원수정
+  deleteMember(String id, String pw)  // 회원삭제
+  hasMember(String id)  // id값으로 회원가입 유무 검사, 있음 : true | 없음 : false
+  login(String id, String pw)  // id, pw으로 로그인, 로그인 성공 : 0, 아이디 오류 : 1, 비번 오류 : 2
+  getMember_list()  // 신뢰도(trust)순 회원 정렬
+  getMember(String id)  // id값으로 회원 정보 반환
+  wish_member_list(String id)  // id값으로 찜목록(회원) 반환
+  wish_board_list(String id)  // id값으로 찜목록(게시물) 반환
+
+BoardDAO
+  insertBoard(Board board) // 게시글 작성, title, content, cate : null값 허용
+  updateBoard(String column, String value, int no)  // 게시글 수정
+  deleteBoard(String id, String no)  // 게시글 삭제
+  getBoard_list()  // 게시물 전체 반환
+  getBoard_serch(String column, String value)  // 게시물 검색
+  getBoard(int no)  // no값으로 게시물 반환
+  getBoardFile_list(int board_no)  // no값으로 file 목록 반환
+  getBoardReply_list(int no)  // no값으로 댓글 리스트 반환
+  getBoardReReply_list(int reply_no)  // no값으로 답글 리스트 반환
+  updateCount(String column, String oper, int no)  // count 변경
+
+BoardReplyDAO
+  insertBoardReply(BoardReply boardReply)  // 댓글 작성
+  updateBoardReply(String content, int no)  // 게시글 수정
+  deleteBoardReply(String no)  // 게시글 삭제
+
+BoardReReplyDAO
+  insertBoardReReply(BoardReReply boardRReeply)  // 댓글 작성
+  updateBoardReReply(String content, int no)  // 게시글 수정
+  deleteBoardReReply(String no)  // 게시글 삭제

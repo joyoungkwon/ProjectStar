@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.col-6 {
+  padding: 0;
+}
+.content_col_small {
+   /*border: 1px solid gray; 확인용 */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 3%;
+  border-radius: 10%;
+  width: 100%;
+  /* height: 22.5vh; */ /* 나중에 정사각형 사진 넣으면 뺄 거 */
+}
+/* small -기본 보기일 때 게시물 위로 커서 올리면 나타날 div 부분*/
+.event_small {
+  position: relative;
+  overflow: hidden;
+}
+.img_s_box {
+  width: 100%;
+  align-items: center;
+}
+.img_s_size {
+  width: 100%;
+  max-height: 100%;
+  flex-shrink: 0;
+  border-radius: 10%;
+}
+.div_hover {
+  height: 120%;
+  position: absolute;
+  /* margin-top: 20%; */
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(24 22 22 / 26%) 5%,rgb(0 0 0 / 35%) 120%);
+  top : 81%;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.div_hover .title {
+  height: 16%;
+  text-align: center;
+  font-size: 2vh;
+  color: white;
+  text-shadow: 2px 2px 2px gray;
+  transition: 0.5s;
+}
+.div_hover .null {
+  height: 17%;
+}
+.event_small:hover .div_hover{
+  top: -19%;
+}
+.div_hover .content, .div_hover .hit_good {
+  font-size: 1.5vh;
+  color: white;
+  text-align: left;
+  padding-left: 3%;
+}
+.div_hover .content {
+  height: 38%;
+  overflow: hidden; /* 메서드 사용 시 삭제! */
+  margin-bottom: 1%;
+}
+.div_hover .hit_good {
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+.event_small:hover .div_hover {
+  transform: translateY(0);
+}
+.fa-expand {
+  margin-right: 3%;
+}
+.h_bottom {
+  margin-right: 3%;
+}

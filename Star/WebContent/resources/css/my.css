@@ -1,0 +1,46 @@
+@charset "UTF-8";
+body { 
+  margin: 0 auto;
+  background-color: rgba(174, 174, 180, 0.199); 
+}
+button {
+  border: none;
+  background-color:transparent;
+}
+#profile {
+	background-color: white;
+    border-radius: 10px;
+}
+#profile #img{
+  border: 1px solid black;
+  border-radius: 50%;
+}
+#link {
+  background-color: white;
+  border-radius: 10px;
+}
+#link > div{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+#link > div+div{
+  border-top: 1px solid lightgray;
+}
+#link > div:hover{
+  cursor: pointer;
+}
+#latest{
+  background-color: white;
+  overflow-y: hidden;
+  border-radius: 10px;
+}
+#latest > div {
+  flex-shrink: 0;
+}
+
+#latest::-webkit-scrollbar {
+  display: none; 
+/* 크롬,사파리,오페라,엣지 - 스크롤 숨기기*/
+}

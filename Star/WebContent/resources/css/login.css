@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+#top{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+.vh20{
+	font-size: 2.0vh;
+}
+
+.vh25{
+	font-size: 2.5vh;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+#btn:hover{
+	filter: brightness(0.8);
+}
+
+#write{
+	border: none;
+	border-bottom: 3px solid lightgray;
+	background-color: transparent;
+	color: white;
+	font-weight: bold;
+	font-size: 2.0vh;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+.check {
+	position: relative;
+	cursor: pointer;
+}
+
+.check::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../img/check.png') no-repeat;
+	background-size: contain;
+}
+
+input[type="checkbox"]:checked+.check::before {
+	background: url('../img/checked.png') no-repeat;
+	background-size: contain;
+}
+
+#login_btn{
+	background-color: lightblue;
+	font-size: 2vh;
+}

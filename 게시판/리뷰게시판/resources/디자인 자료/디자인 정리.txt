@@ -1,0 +1,21 @@
+[html]
+1. 메인페이지 - index.html -> layout.css, index.css 적용
+2. 리뷰 기본(작게) 보기 - board_view.html -> layout.css, index.css, board_view.css 적용
+3. 리뷰 기본(크게) 보기 - board_view_big.html -> layout.css, index.css, board_view.css 적용
+----------------------------------------------------------------------------------
+[css]
+1. layout.css
+2. index.css
+3. Board_view.css
+----------------------------------------------------------------------------------
+[디자인]
+1. index.html 카테고리 아이콘 색 -> RGB(29,105,237)
+2. cursor -> https://www.w3schools.com/cssref/tryit.php?filename=trycss_cursor
+3. 저작권 무료 이미지 사이트 - https://unsplash.com/ko
+4.
+5.
+----------------------------------------------------------------------------------
+1. 상세보기 사진 여러장 슬라이드
+-> https://blogpack.tistory.com/814
+
+2. 

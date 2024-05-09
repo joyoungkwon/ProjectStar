@@ -1,0 +1,31 @@
+.noti_col_big {
+  color: white;
+  height: 83vh;
+  border: 1px solid gray;
+  border-radius: 11px;
+  /* font-size: 1.8vh; */
+}
+.bline {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  /* height: 10%; */
+  text-align: left;
+  padding: 2%;
+  /* word-break: keep-all ; */
+  word-break: break-all ;
+  display: flex;
+  align-items: center;
+}
+.in_text {
+  font-size: 1.8vh;
+}
+.noti_col_big {
+  overflow-y: scroll;
+  /*스크롤 숨기기*/
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+.noti_col_big::-webkit-scrollbar {
+  display: none; 
+/* 크롬,사파리,오페라,엣지 - 스크롤 숨기기*/
+}

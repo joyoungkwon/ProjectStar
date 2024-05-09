@@ -1,0 +1,54 @@
+.rank{
+  width: 80vw;
+  height: 80vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rank_in{
+  width: 60%;
+  height: 60%;
+  border: 1px solid black;
+  display: flex;
+}
+.rank-wrapper2d{
+  background-color: blue;
+  width: 100%;
+}
+.rank-wrapper1d{
+ background-color: red;
+ width: 100%;
+ height: 50%;
+}
+.rank-wrapper3d{
+ background-color: yellow;
+ width: 100%;
+ height: 20%;
+}
+.rank_real_in{
+  width: 33.33333333333333%;
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.rank_img{
+    width: 30%;
+    height: 90%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.rank_text{
+  width: 60%;
+}
+.imt_wrapper{
+/*   align-items: flex-end; */
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+.wwred {
+  border: 1px solid red;
+}

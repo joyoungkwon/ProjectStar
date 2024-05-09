@@ -1,0 +1,85 @@
+@charset "UTF-8";
+body {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+button {
+  border: none;
+  background-color:transparent;
+}
+#star_logo {
+  /*  border: 1px dotted black;  확인용 */
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#search_div {
+ /* border: 1px dotted red; 확인용 */
+}
+#search_boxx{
+  margin: 0 auto;
+  width: 70%;
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid lightgray; /* #edebeb; */
+}
+#search_box{
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+}
+#search_box input{
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+}
+input:focus {
+  outline:none;
+}
+#search_btn{
+  padding: 3px;
+  border-radius: 0 5px 5px 0;
+}
+#search_box i{
+  /* flex: 1;  */
+}
+#category_content {
+  /* border: 1px solid black;  확인용 */
+  margin-top: 2rem;
+}
+.custom_row { /* A_row에서 custom_row로 이름 변경 */
+  --bs-gutter-x: -1rem;
+  --bs-gutter-y: 1rem;
+}
+.category_col {
+ /* border: 1px solid gray;  확인용 */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.category_div {
+ /* border: 1px dotted #edebeb;  확인용 */
+  border-radius: 16px;
+  width: 5rem;
+  height: 5rem;
+  text-decoration: none;
+  color:white;
+}
+.category_div:hover {
+	cursor:pointer;
+  font-weight: bold;
+}
+.category_div_top {
+ /* border-bottom: 1px dotted white;  확인용 */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: 3rem;
+  color: #1d69ed;
+}

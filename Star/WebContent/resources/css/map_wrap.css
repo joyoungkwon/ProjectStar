@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.modal_wrap { /*주소 모달창*/
+	display: none;
+	width: 70%;
+	height: 50vh;
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	background: #eee;
+	z-index: 20;
+	border-radius: 12px;
+}
+
+.black_bg {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+.modal_close, #complete_search_btn{
+	border: none;
+	height: 4vh;
+	flex-shrink: 0;
+}

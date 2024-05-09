@@ -1,0 +1,4 @@
+@charset "UTF-8";
+#view_box > div:nth-child(2n) {
+	display: none;
+}
